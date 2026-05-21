@@ -29,6 +29,6 @@ html {
   }
 
   .glass-hover {
-    @apply hover:bg-white/15 hover:border-white/30 transition-all duration-300;
+    @apply hover:bg-white/15 hover:border-white/30 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300;
   }
 }

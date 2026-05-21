@@ -1,18 +1,22 @@
 import SectionWrapper from './ui/SectionWrapper'
 import GlassCard from './ui/GlassCard'
+import FadeInSection from './ui/FadeInSection'
 import { projects } from '@/app/data/projects'
 
 export default function ProjectsSection() {
   return (
     <SectionWrapper id="projects">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">프로젝트</h2>
-        <p className="text-white/50 text-lg">만들고 있는 것들</p>
-      </div>
+      <FadeInSection>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">프로젝트</h2>
+          <p className="text-white/50 text-lg">만들고 있는 것들</p>
+        </div>
+      </FadeInSection>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <GlassCard key={index} as="article" className="p-6 flex flex-col gap-4">
+          <FadeInSection key={index} delay={index * 100}>
+          <GlassCard as="article" className="p-6 flex flex-col gap-4 h-full">
             {/* 상태 배지 */}
             <div className="flex items-center justify-between">
               <span
@@ -59,6 +63,7 @@ export default function ProjectsSection() {
               </a>
             )}
           </GlassCard>
+          </FadeInSection>
         ))}
       </div>
     </SectionWrapper>
