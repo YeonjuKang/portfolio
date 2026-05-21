@@ -13,7 +13,7 @@ export default function SkillsSection() {
         </div>
       </FadeInSection>
 
-      <div className="space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {categories.map((category, i) => {
           const categorySkills = skills.filter((s) => s.category === category)
           return (
