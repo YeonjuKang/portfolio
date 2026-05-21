@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className={`${inter.variable} ${notoSansKR.variable}`}>
-      <body className="bg-mesh-gradient bg-[#0a0a14] font-sans antialiased">
+    <html lang="ko" className={`${inter.variable} ${notoSansKR.variable} bg-[#0a0a14]`}>
+      <body className="bg-mesh-gradient bg-[#0a0a14] min-h-screen font-sans antialiased">
         {children}
       </body>
     </html>
