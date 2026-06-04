@@ -40,6 +40,13 @@ npm run lint     # ESLint 실행
 - 프로젝트 추가/수정 → `app/data/projects.ts`
 - 경력 & 학력 수정 → 데이터베이스(`experiences`, `educations` 테이블) 수정 또는 `drizzle/seed.ts` 파일 수정을 통해 변경 가능
 
+**외부 API 연동:**
+
+> **⚠️ API 작업 필수 규칙**: 새 외부 API를 연동하거나 기존 API를 수정할 때는 **작업 시작 전에** 반드시 [`docs/api/`](docs/api/) 폴더를 먼저 확인하십시오.
+> - 각 API별 스펙 파일(예: [`docs/api/job-spec.md`](docs/api/job-spec.md))에 엔드포인트, 요청/응답 스키마, 환경변수 키, 에러 코드, 구현 가이드가 정리되어 있습니다.
+> - 새 API를 추가하면 `docs/api/` 폴더에 스펙 파일을 함께 작성하십시오.
+> - API 키는 반드시 서버 사이드 환경변수로만 사용하고, `NEXT_PUBLIC_` 접두사를 붙이지 마십시오.
+
 **데이터베이스 (Supabase + Drizzle ORM):**
 
 > **⚠️ DB 작업 필수 규칙**: 테이블 추가, 컬럼 변경, 인덱스 설계 등 **모든 DB 관련 작업을 시작하기 전에** 반드시 [`docs/db/`](docs/db/) 폴더를 먼저 확인하십시오.
