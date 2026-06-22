@@ -1,3 +1,5 @@
+import LottieBackground from './ui/LottieBackground'
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
@@ -11,6 +13,9 @@ export default function HeroSection() {
         className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-float pointer-events-none"
         style={{ animationDelay: '4s' }}
       />
+
+      {/* Lottie 배경 애니메이션 */}
+      <LottieBackground />
 
       {/* 콘텐츠 */}
       <div className="relative z-10 text-center max-w-3xl mx-auto">
