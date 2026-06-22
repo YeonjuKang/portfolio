@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import SectionWrapper from './ui/SectionWrapper'
 import DevLabel from './ui/DevLabel'
+import { Newspaper } from 'lucide-react'
 import type { Job, JobSearchResponse } from '@/lib/jobs'
 
 const DEFAULT_QUERY = 'product manager service planner jobs'
@@ -64,7 +65,10 @@ export default function JobsSection() {
       <DevLabel file="components/JobsSection.tsx" name="JobsSection" depth={1} />
       {/* 섹션 헤더 */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">채용 공고</h2>
+        <div className="inline-flex items-center gap-3 mb-4">
+          <Newspaper size={36} className="text-white/80 shrink-0" />
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text">채용 공고</h2>
+        </div>
         <p className="text-white/50 text-lg">관심 직무의 최신 채용 정보를 확인하세요</p>
       </div>
 

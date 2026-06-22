@@ -1,6 +1,7 @@
 import SectionWrapper from './ui/SectionWrapper'
 import FadeInSection from './ui/FadeInSection'
 import DevLabel from './ui/DevLabel'
+import { MessageCircle } from 'lucide-react'
 
 export default function ContactSection() {
   return (
@@ -9,7 +10,10 @@ export default function ContactSection() {
       <FadeInSection>
         <div className="text-center space-y-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">함께 이야기해요</h2>
+            <div className="inline-flex items-center gap-3 mb-4">
+                <MessageCircle size={36} className="text-white/80 shrink-0" />
+                <h2 className="text-4xl md:text-5xl font-bold gradient-text">함께 이야기해요</h2>
+              </div>
             <p className="text-white/50 text-lg">궁금한 점이 있으시면 언제든지 연락해주세요</p>
           </div>
 

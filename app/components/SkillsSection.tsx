@@ -2,6 +2,7 @@ import SectionWrapper from './ui/SectionWrapper'
 import GlassCard from './ui/GlassCard'
 import FadeInSection from './ui/FadeInSection'
 import DevLabel from './ui/DevLabel'
+import { Wrench } from 'lucide-react'
 import { skills, categories } from '@/app/data/skills'
 
 export default function SkillsSection() {
@@ -10,7 +11,10 @@ export default function SkillsSection() {
       <DevLabel file="components/SkillsSection.tsx" name="SkillsSection" depth={1} />
       <FadeInSection>
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">기술 스택</h2>
+          <div className="inline-flex items-center gap-3 mb-4">
+              <Wrench size={36} className="text-white/80 shrink-0" />
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">기술 스택</h2>
+            </div>
           <p className="text-white/50 text-lg">사용하는 도구와 기술들</p>
         </div>
       </FadeInSection>

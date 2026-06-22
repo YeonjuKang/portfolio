@@ -4,6 +4,7 @@ import FadeInSection from './ui/FadeInSection'
 import GlassCard from './ui/GlassCard'
 import DeleteButton from './ui/DeleteButton'
 import DevLabel from './ui/DevLabel'
+import { Briefcase } from 'lucide-react'
 import { db } from '@/index'
 import { experiences as experiencesTable, educations as educationsTable } from '@/drizzle/schema'
 import { desc } from 'drizzle-orm'
@@ -28,7 +29,10 @@ export default async function ExperienceSection() {
       {/* 섹션 제목 */}
       <FadeInSection>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">경력 & 학력</h2>
+          <div className="inline-flex items-center gap-3 mb-4">
+              <Briefcase size={36} className="text-white/80 shrink-0" />
+              <h2 className="text-4xl md:text-5xl font-bold gradient-text">경력 & 학력</h2>
+            </div>
           <p className="text-white/50 text-lg">제가 걸어온 발자취들을 모았습니다</p>
         </div>
       </FadeInSection>
