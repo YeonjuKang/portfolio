@@ -3,6 +3,7 @@ import SectionWrapper from './ui/SectionWrapper'
 import FadeInSection from './ui/FadeInSection'
 import GlassCard from './ui/GlassCard'
 import DeleteButton from './ui/DeleteButton'
+import DevLabel from './ui/DevLabel'
 import { db } from '@/index'
 import { experiences as experiencesTable, educations as educationsTable } from '@/drizzle/schema'
 import { desc } from 'drizzle-orm'
@@ -23,6 +24,7 @@ export default async function ExperienceSection() {
 
   return (
     <SectionWrapper id="experience">
+      <DevLabel file="components/ExperienceSection.tsx" name="ExperienceSection" depth={1} />
       {/* 섹션 제목 */}
       <FadeInSection>
         <div className="text-center mb-16">

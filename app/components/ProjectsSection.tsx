@@ -1,11 +1,13 @@
 import SectionWrapper from './ui/SectionWrapper'
 import GlassCard from './ui/GlassCard'
 import FadeInSection from './ui/FadeInSection'
+import DevLabel from './ui/DevLabel'
 import { projects } from '@/app/data/projects'
 
 export default function ProjectsSection() {
   return (
     <SectionWrapper id="projects">
+      <DevLabel file="components/ProjectsSection.tsx" name="ProjectsSection" depth={1} />
       <FadeInSection>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">프로젝트</h2>

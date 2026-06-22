@@ -59,6 +59,32 @@ npm run lint     # ESLint 실행
   - `npx drizzle-kit push` — 로컬 스키마 정의를 실시간으로 Supabase DB에 배포 및 동기화합니다.
   - `npx tsx drizzle/seed.ts` — DB 기초 데이터 시딩 스크립트를 실행합니다.
 
+**DevLabel (개발 전용 컴포넌트 표시):**
+
+> **⚠️ 새 컴포넌트 작성 규칙**: 컴포넌트를 새로 만들 때는 반드시 `DevLabel`을 추가하십시오.
+
+- `app/components/ui/DevLabel.tsx` — `NODE_ENV=development`일 때만 렌더링되는 컴포넌트 식별 라벨
+- 사용법: 컴포넌트 최상위 엘리먼트에 `relative` 클래스를 추가하고, 첫 자식으로 `<DevLabel>` 삽입
+- `depth` 규칙:
+  - `depth={1}` — 페이지 레벨 섹션 (파란색, top-left). 예: `HeroSection`, `AboutSection`
+  - `depth={2}` — 재사용 UI 컴포넌트 (보라색, top-right). 예: `GlassCard`, `LottieBackground`
+  - `depth={3}` — 섹션 내 하위 영역/반복 아이템 (주황색, bottom-left). 예: `JobCard`
+- `file` 값은 `app/` 이후 경로. 예: `components/ui/GlassCard.tsx`
+
+```tsx
+// 예시
+import DevLabel from './ui/DevLabel'
+
+export default function MyComponent() {
+  return (
+    <div className="relative ...">
+      <DevLabel file="components/MyComponent.tsx" name="MyComponent" depth={2} />
+      {/* 나머지 콘텐츠 */}
+    </div>
+  )
+}
+```
+
 **디자인 시스템:**
 
 - 배경: `#0a0a14` (near-black) + radial gradient blobs (보라/파랑/청록)

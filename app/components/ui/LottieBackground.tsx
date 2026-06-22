@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import DevLabel from './DevLabel'
 
 export default function LottieBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -30,6 +31,8 @@ export default function LottieBackground() {
     <div
       ref={containerRef}
       className="absolute inset-0 w-full h-full pointer-events-none opacity-20"
-    />
+    >
+      <DevLabel file="components/ui/LottieBackground.tsx" name="LottieBackground" depth={2} />
+    </div>
   )
 }

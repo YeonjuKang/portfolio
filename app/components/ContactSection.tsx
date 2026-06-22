@@ -1,9 +1,11 @@
 import SectionWrapper from './ui/SectionWrapper'
 import FadeInSection from './ui/FadeInSection'
+import DevLabel from './ui/DevLabel'
 
 export default function ContactSection() {
   return (
     <SectionWrapper id="contact">
+      <DevLabel file="components/ContactSection.tsx" name="ContactSection" depth={1} />
       <FadeInSection>
         <div className="text-center space-y-8">
           <div>

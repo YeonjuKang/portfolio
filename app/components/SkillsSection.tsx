@@ -1,11 +1,13 @@
 import SectionWrapper from './ui/SectionWrapper'
 import GlassCard from './ui/GlassCard'
 import FadeInSection from './ui/FadeInSection'
+import DevLabel from './ui/DevLabel'
 import { skills, categories } from '@/app/data/skills'
 
 export default function SkillsSection() {
   return (
     <SectionWrapper id="skills">
+      <DevLabel file="components/SkillsSection.tsx" name="SkillsSection" depth={1} />
       <FadeInSection>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">기술 스택</h2>

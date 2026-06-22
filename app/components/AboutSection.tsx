@@ -1,6 +1,7 @@
 import SectionWrapper from './ui/SectionWrapper'
 import FadeInSection from './ui/FadeInSection'
 import GlassCard from './ui/GlassCard'
+import DevLabel from './ui/DevLabel'
 
 const keywords = [
   { icon: '🚀', title: '빠른 실행', desc: '아이디어가 생기면 바로 만들어봅니다' },
@@ -11,6 +12,7 @@ const keywords = [
 export default function AboutSection() {
   return (
     <SectionWrapper id="about">
+      <DevLabel file="components/AboutSection.tsx" name="AboutSection" depth={1} />
       <FadeInSection>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">저는 이런 사람이에요</h2>

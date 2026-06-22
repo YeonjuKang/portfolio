@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import SectionWrapper from './ui/SectionWrapper'
+import DevLabel from './ui/DevLabel'
 import type { Job, JobSearchResponse } from '@/lib/jobs'
 
 const DEFAULT_QUERY = 'product manager service planner jobs'
@@ -60,6 +61,7 @@ export default function JobsSection() {
 
   return (
     <SectionWrapper id="jobs">
+      <DevLabel file="components/JobsSection.tsx" name="JobsSection" depth={1} />
       {/* 섹션 헤더 */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">채용 공고</h2>
@@ -167,8 +169,9 @@ function JobCard({ job }: { job: Job }) {
       href={job.job_apply_link}
       target="_blank"
       rel="noopener noreferrer"
-      className="glass glass-hover rounded-2xl p-5 flex gap-4 items-start group block transition-all duration-200"
+      className="relative glass glass-hover rounded-2xl p-5 flex gap-4 items-start group block transition-all duration-200"
     >
+      <DevLabel file="components/JobsSection.tsx" name="JobCard" depth={3} />
       {/* 회사 로고 */}
       <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden">
         {job.employer_logo ? (

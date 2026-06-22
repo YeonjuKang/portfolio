@@ -1,8 +1,10 @@
 import LottieBackground from './ui/LottieBackground'
+import DevLabel from './ui/DevLabel'
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      <DevLabel file="components/HeroSection.tsx" name="HeroSection" depth={1} />
       {/* 배경 장식 블러 blobs */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-float pointer-events-none" />
       <div
